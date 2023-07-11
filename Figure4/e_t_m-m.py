@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy.stats
-
 
 def generate_portion(s, mu_c, sigma_s, sigma_c):
     a = 1 / 2 / sigma_s ** 2 + 1 / 2 / sigma_c ** 2
@@ -42,7 +40,7 @@ def generate_pic(sigma_s=4, sigma_c_0=10, sigma_c_1=10, mu_c_0=150, mu_c_1=50):
 
 plt.plot(list(range(-10,110)), [0] * 120, 'k--')
 generate_pic(sigma_c_0=200)
-plt.ylabel('E[G|M] - M')
+plt.ylabel('E[T|M] - M')
 plt.xlabel('M')
 plt.savefig("egm_m.eps", format='eps', bbox_inches='tight')
 plt.show()
